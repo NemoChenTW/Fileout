@@ -7,6 +7,8 @@
 
 #include "header/Fileout.h"
 
+#include "header/TimeStamp/header/TimeStamp.h"
+
 Fileout::Fileout()
 {
 
@@ -46,5 +48,8 @@ void Fileout::closeFile()
  */
 string Fileout::timeFormat()
 {
-	return "2014/11/11: ";
+	TimeStamp timeStamp;
+	string timeString = timeStamp.getTimeStr() + " ";
+
+	return timeString;
 }
